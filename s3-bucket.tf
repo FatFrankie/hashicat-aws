@@ -3,7 +3,7 @@ module "s3_bucket" {
   version = "2.2.0"
 
   bucket_prefix = "fra"
-  bucket = "frankieWasHere-s3-bucket"
+  bucket = "fra_frankieWasHere-s3-bucket"
   acl    = "private"
 
   versioning = {
