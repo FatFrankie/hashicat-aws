@@ -125,12 +125,15 @@ resource "aws_instance" "hashicat" {
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.hashicat.id
   vpc_security_group_ids      = [aws_security_group.hashicat.id]
-  Department = devops
-
+ 
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
   }
+}
+
+resource "aws_instance" {
+   Department = devops
 }
 
 # We're using a little trick here so we can run the provisioner without
